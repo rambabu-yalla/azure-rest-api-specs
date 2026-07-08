@@ -24,6 +24,13 @@ model DeletedServer
     SegmentName = "deletedServers",
     NamePattern = ""
   >;
+
+  /**
+   * Resource location.
+   */
+  @added(Versions.v2025_08_01_preview)
+  @visibility(Lifecycle.Read)
+  location?: string;
 }
 
 alias DeletedServersOps = Azure.ResourceManager.Legacy.LegacyOperations<
